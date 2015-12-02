@@ -11,7 +11,7 @@ interface IProps {
 export default class Badge extends React.Component<IProps, {}> {
     public render() {
         const {className, status} = this.props;
-        const icons: {[key: number]: string} = {
+        const icons: any = {
             [StatusType.SUCCESS]: "fa-check",
             [StatusType.FIXED]: "fa-check",
             [StatusType.CANCELLED]: "fa-minus",
