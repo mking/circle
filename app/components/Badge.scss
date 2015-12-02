@@ -1,0 +1,63 @@
+@import '../variables';
+
+:local(.badge) {
+  align-items: center;
+  border-radius: 12px;
+  display: flex;
+  height: 24px;
+
+  &:local(.badge--CANCELLED) {
+    background-color: $color-lightGray;
+
+    :local(.status) {
+      background-color: $color-gray;
+    }
+  }
+
+  &:local(.badge--FAILED) {
+    background-color: $color-lightRed;
+
+    :local(.status) {
+      background-color: $color-red;
+    }
+  }
+
+  &:local(.badge--FIXED) {
+    background-color: $color-lightGreen;
+
+    :local(.status) {
+      background-color: $color-green;
+    }
+  }
+
+  &:local(.badge--SUCCESS) {
+    background-color: $color-lightGreen;
+
+    :local(.status) {
+      background-color: $color-green;
+    }
+  }
+}
+
+:local(.icon) {
+  color: white;
+  font-size: 11px;
+}
+
+:local(.status) {
+  align-items: center;
+  border-radius: 8px;
+  display: flex;
+  height: 16px;
+  justify-content: center;
+  margin-left: 4px;
+  width: 16px;
+}
+
+:local(.text) {
+  color: black;
+  font-family: $fontFamily-roboto;
+  font-size: 11px;
+  margin-left: 10px;
+  text-transform: uppercase;
+}

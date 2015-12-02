@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "jsx": "preserve",
+    "noImplicitAny": true
+  },
+  "files": [
+    "node_modules/immutable/dist/immutable.d.ts",
+    "circle-typings/require.d.ts",
+    "typings/tsd.d.ts"
+  ]
+}

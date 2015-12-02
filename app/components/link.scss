@@ -1,0 +1,10 @@
+@import '../variables';
+
+@mixin link {
+  color: #27a0b6;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
