@@ -5,8 +5,11 @@
     "noImplicitAny": true
   },
   "files": [
+    "typings/classnames/classnames.d.ts",
+    "typings/jquery/jquery.d.ts",
     "node_modules/immutable/dist/immutable.d.ts",
-    "circle-typings/require.d.ts",
-    "typings/tsd.d.ts"
+    "typings/require/require.d.ts",
+    "typings/react/react.d.ts",
+    "typings/react/react-dom.d.ts"
   ]
 }

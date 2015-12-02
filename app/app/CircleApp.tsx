@@ -1,7 +1,7 @@
-import * as classNames from "classnames";
 import * as Immutable from "immutable";
 import * as React from "react";
-import {Badge} from "../components/Badge";
+import Badge from "../components/Badge";
+import classNames from "classnames";
 import {StatusType} from "../components/StatusType";
 const styles: any = require("./CircleApp.scss");
 
@@ -13,7 +13,7 @@ interface IState {
     counter: number;
 }
 
-export class CircleApp extends React.Component<IProps, IState> {
+export default class CircleApp extends React.Component<IProps, IState> {
     constructor(props: IProps) {
         super(props);
         this.state = {

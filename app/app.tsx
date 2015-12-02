@@ -1,9 +1,9 @@
 require("./reset.scss");
 require("babel/polyfill");
-import * as $ from "jquery";
+import $ from "jquery";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import {CircleApp} from "./app/CircleApp";
+import CircleApp from "./app/CircleApp";
 
 console.log(React);
 
