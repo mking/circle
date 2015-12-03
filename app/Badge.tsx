@@ -1,14 +1,14 @@
 import * as React from "react";
-import {StatusType} from "./StatusType";
+import StatusType from "./StatusType";
 import classNames from "classnames";
 const styles: any = require("./Badge.scss");
 
-interface IProps {
+interface IBadgeProps {
     className?: string;
     status: StatusType;
 }
 
-export default class Badge extends React.Component<IProps, {}> {
+export default class Badge extends React.Component<IBadgeProps, {}> {
     public render() {
         const {className, status} = this.props;
         const icons: any = {

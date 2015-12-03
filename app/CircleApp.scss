@@ -1,0 +1,28 @@
+@import './variables';
+@import './link';
+
+:local(.app) {
+  background-color: #f5f5f5;
+  padding: 10px;
+}
+
+:local(.badge) {
+  width: 105px;
+}
+
+:local(.build) {
+  min-height: 75px;
+
+  &:not(:first-child) {
+    margin-top: 5px;
+  }
+}
+
+:local(.link) {
+  @include link;
+  display: block;
+
+  &:not(:first-child) {
+    margin-top: 10px;
+  }
+}

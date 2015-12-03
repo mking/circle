@@ -1,0 +1,87 @@
+@import './variables';
+@import './link';
+
+:local(.badge) {
+  width: 105px;
+}
+
+:local(.build) {
+  background-color: white;
+  box-shadow: 0 1px 0 0 $color-shadow;
+  display: flex;
+}
+
+:local(.field) {
+  display: flex;
+  flex-shrink: 0;
+
+  &:not(:first-child) {
+    margin-left: 25px;
+  }
+}
+
+:local(.fieldIcon) {
+  color: $color-black;
+  flex-shrink: 0;
+  font-size: 14px;
+  margin-right: 10px;
+
+  &:local(.fieldIcon--avatar) {
+    color: $color-avatar;
+  }
+}
+
+:local(.fieldLink) {
+  @include link;
+}
+
+:local(.fields) {
+  display: flex;
+  flex-shrink: 0;
+  padding: 10px;
+}
+
+:local(.fieldText) {
+  color: $color-black;
+  flex-shrink: 0;
+  font-family: $fontFamily-roboto;
+  font-size: 12px;
+}
+
+:local(.info) {
+  display: flex;
+  flex-grow: 1;
+  min-width: 1px;
+}
+
+:local(.infoText) {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: 1px;
+  padding: 10px;
+}
+
+:local(.status) {
+  border-right: 1px solid $color-border;
+  display: flex;
+  flex-shrink: 0;
+  padding: 10px;
+}
+
+:local(.subtitleLink) {
+  @include link;
+  color: $color-gray;
+  flex-shrink: 0;
+  font-family: $fontFamily-robotoMono;
+  font-size: 11px;
+  margin-top: 10px;
+}
+
+:local(.titleLink) {
+  @include link;
+  color: $color-title;
+  font-family: $fontFamily-roboto;
+  flex-shrink: 0;
+  font-size: 13px;
+}

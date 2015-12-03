@@ -1,6 +1,8 @@
-export enum StatusType {
+enum StatusType {
     SUCCESS,
     FIXED,
     CANCELLED,
     FAILED
 }
+
+export default StatusType

@@ -1,20 +1,21 @@
 import * as Immutable from "immutable";
 import * as React from "react";
-import Badge from "../components/Badge";
+import Badge from "./Badge";
+import Build from "./Build";
 import classNames from "classnames";
-import {StatusType} from "../components/StatusType";
+import StatusType from "./StatusType";
 const styles: any = require("./CircleApp.scss");
 
-interface IProps {
+interface ICircleAppProps {
     className?: string;
 }
 
-interface IState {
+interface ICircleAppState {
     counter: number;
 }
 
-export default class CircleApp extends React.Component<IProps, IState> {
-    constructor(props: IProps) {
+export default class CircleApp extends React.Component<ICircleAppProps, ICircleAppState> {
+    constructor(props: ICircleAppProps) {
         super(props);
         this.state = {
             counter: 0
@@ -33,6 +34,16 @@ export default class CircleApp extends React.Component<IProps, IState> {
             <div>
                 Counter: {this.state.counter}
             </div>
+            {Immutable.List([
+                StatusType.SUCCESS,
+                StatusType.FIXED,
+                StatusType.CANCELLED,
+                StatusType.FAILED
+            ]).map((status, i) => {
+                return <Build key={i}
+                    className={styles.build}
+                    status={status}/>;
+            })}
             {Immutable.List([
                 StatusType.SUCCESS,
                 StatusType.FIXED,
