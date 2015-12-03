@@ -1,0 +1,27 @@
+@import './variables';
+
+:local(.icon) {
+  color: white;
+  font-size: 11px;
+}
+
+:local(.status) {
+  align-items: center;
+  border-radius: 8px;
+  display: flex;
+  height: 16px;
+  justify-content: center;
+  width: 16px;
+
+  &:local(.status--CANCELLED) {
+    background-color: $color-gray;
+  }
+
+  &:local(.status--FAILED) {
+    background-color: $color-red;
+  }
+
+  &:local(.status--SUCCESS) {
+    background-color: $color-green;
+  }
+}

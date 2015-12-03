@@ -1,0 +1,42 @@
+@import './variables';
+@import './link';
+
+:local(.branch) {
+  @include link;
+  display: flex;
+  padding: 0 10px;
+
+  &:hover {
+    background-color: $color-whiteHover;
+    text-decoration: none;
+
+    :local(.title) {
+      text-decoration: underline;
+    }
+  }
+}
+
+:local(.status) {
+  flex-shrink: 0;
+  margin-right: 10px;
+  padding: 10px 0;
+}
+
+:local(.subtitle) {
+  color: $color-gray;
+  font-family: $fontFamily-roboto;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+:local(.text) {
+  flex-grow: 1;
+  min-width: 1px;
+  padding: 10px 0;
+}
+
+:local(.title) {
+  color: $color-black;
+  font-family: $fontFamily-roboto;
+  font-size: 12px;
+}

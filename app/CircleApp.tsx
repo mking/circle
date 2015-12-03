@@ -1,6 +1,7 @@
 import * as Immutable from "immutable";
 import * as React from "react";
 import Badge from "./Badge";
+import Branch from "./Branch";
 import Build from "./Build";
 import classNames from "classnames";
 import StatusType from "./StatusType";
@@ -41,6 +42,29 @@ export default class CircleApp extends React.Component<ICircleAppProps, ICircleA
             <div>
                 Counter: {this.state.counter}
             </div>
+            {Immutable.List([
+                Immutable.Map({
+                    date: 1441249882306,
+                    name: "filter-index",
+                    status: StatusType.FAILED
+                }),
+                Immutable.Map({
+                    date: 1441249882306,
+                    name: "activity-refactor",
+                    status: StatusType.CANCELLED
+                }),
+                Immutable.Map({
+                    date: 1430622658084,
+                    name: "leader-name",
+                    status: StatusType.SUCCESS
+                })
+            ]).map((branch, i) => {
+                return <Branch key={i}
+                    className={styles.branch}
+                    name={branch.get("name") as string}
+                    date={branch.get("date") as number}
+                    status={branch.get("status") as StatusType}/>;
+            })}
             {statuses.map((status, i) => {
                 return <Build key={i}
                     className={styles.build}

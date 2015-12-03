@@ -1,9 +1,10 @@
 import * as React from "react";
+import StatusIndicator from "./StatusIndicator";
 import StatusType from "./StatusType";
 import classNames from "classnames";
 const styles: any = require("./Badge.scss");
 
-interface IBadgeProps {
+interface IBadgeProps extends React.Props<any> {
     className?: string;
     status: StatusType;
 }
@@ -11,19 +12,7 @@ interface IBadgeProps {
 export default class Badge extends React.Component<IBadgeProps, {}> {
     public render() {
         const {className, status} = this.props;
-        const badgeStatuses: any = {
-            [StatusType.SUCCESS]: StatusType.SUCCESS,
-            [StatusType.FIXED]: StatusType.SUCCESS,
-            [StatusType.CANCELLED]: StatusType.CANCELLED,
-            [StatusType.FAILED]: StatusType.FAILED,
-            [StatusType.TIMED_OUT]: StatusType.FAILED,
-        };
-        const badgeStatus = badgeStatuses[status];
-        const icons: any = {
-            [StatusType.SUCCESS]: "fa-check",
-            [StatusType.CANCELLED]: "fa-minus",
-            [StatusType.FAILED]: "fa-exclamation"
-        };
+        const badgeStatus = StatusType.toBadgeStatus(status);
         const texts: any = {
             [StatusType.SUCCESS]: "Success",
             [StatusType.FIXED]: "Fixed",
@@ -32,9 +21,7 @@ export default class Badge extends React.Component<IBadgeProps, {}> {
             [StatusType.TIMED_OUT]: "Timed out",
         };
         return <div className={classNames(styles.badge, styles[`badge--${StatusType[badgeStatus]}`], className)}>
-            <div className={styles.status}>
-                <i className={classNames(styles.icon, "fa", icons[badgeStatus])}/>
-            </div>
+            <StatusIndicator className={styles.status} status={badgeStatus}/>
             <span className={styles.text}>{texts[status]}</span>
         </div>;
     }

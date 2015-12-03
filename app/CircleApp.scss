@@ -10,6 +10,10 @@
   width: 105px;
 }
 
+:local(.branch) {
+  border-top: 1px solid $color-shadow;
+}
+
 :local(.build) {
   min-height: 75px;
 
