@@ -1,0 +1,10 @@
+@import './variables';
+
+:local(.repo) {
+  flex-shrink: 0;
+}
+
+:local(.repos) {
+  display: flex;
+  flex-direction: column;
+}

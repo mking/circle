@@ -1,0 +1,14 @@
+@import './variables';
+
+:local(.build) {
+  flex-shrink: 0;
+
+  &:not(:first-child) {
+    margin-top: 5px;
+  }
+}
+
+:local(.builds) {
+  display: flex;
+  flex-direction: column;
+}

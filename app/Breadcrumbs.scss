@@ -1,0 +1,23 @@
+@import './variables';
+@import './link';
+
+:local(.breadcrumb) {
+  flex-shrink: 0;
+}
+
+:local(.breadcrumbs) {
+  display: flex;
+}
+
+:local(.icon) {
+  color: $color-black;
+  font-size: 16px;
+  margin: 0 10px;
+}
+
+:local(.link) {
+  @include link;
+  color: $color-black;
+  font-family: $fontFamily-roboto;
+  font-size: 20px;
+}

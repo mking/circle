@@ -1,0 +1,35 @@
+@import './variables';
+@import './link';
+
+:local(.branch) {
+  flex-shrink: 0;
+
+  &:not(:first-child) {
+    border-top: 1px solid $color-shadow;
+  }
+}
+
+:local(.branches) {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+:local(.repo) {
+  display: flex;
+  flex-direction: column;
+}
+
+:local(.repoHeader) {
+  @include link;
+  background-color: white;
+  border-top: 1px solid $color-shadow;
+  color: $color-black;
+  cursor: pointer;
+  display: block;
+  flex-shrink: 0;
+  font-family: $fontFamily-roboto;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px;
+}

@@ -28,7 +28,7 @@ module.exports = {
         include: [
           path.join(__dirname, 'app')
         ],
-        loaders: ['style', 'css?localIdentName=circular-[name]-[local]', 'postcss', 'sass']
+        loaders: ['style', 'css?localIdentName=circle-[name]-[local]', 'postcss', 'sass']
       }
     ]
   },
