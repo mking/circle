@@ -2,7 +2,8 @@ enum StatusType {
     SUCCESS,
     FIXED,
     CANCELLED,
-    FAILED
+    FAILED,
+    TIMED_OUT
 }
 
 export default StatusType

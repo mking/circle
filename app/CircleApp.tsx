@@ -24,6 +24,13 @@ export default class CircleApp extends React.Component<ICircleAppProps, ICircleA
 
     public render() {
         const {className} = this.props;
+        const statuses = Immutable.List([
+            StatusType.SUCCESS,
+            StatusType.FIXED,
+            StatusType.CANCELLED,
+            StatusType.FAILED,
+            StatusType.TIMED_OUT
+        ]);
         return <div className={classNames(styles.app, className)}>
             <div>
                 <button type="button"
@@ -34,22 +41,12 @@ export default class CircleApp extends React.Component<ICircleAppProps, ICircleA
             <div>
                 Counter: {this.state.counter}
             </div>
-            {Immutable.List([
-                StatusType.SUCCESS,
-                StatusType.FIXED,
-                StatusType.CANCELLED,
-                StatusType.FAILED
-            ]).map((status, i) => {
+            {statuses.map((status, i) => {
                 return <Build key={i}
                     className={styles.build}
                     status={status}/>;
             })}
-            {Immutable.List([
-                StatusType.SUCCESS,
-                StatusType.FIXED,
-                StatusType.CANCELLED,
-                StatusType.FAILED
-            ]).map((status, i) => {
+            {statuses.map((status, i) => {
                 return <a key={i} className={styles.link} href="#">
                     <Badge className={styles.badge} status={status}/>
                 </a>;

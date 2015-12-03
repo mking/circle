@@ -27,7 +27,7 @@
   margin-right: 10px;
 
   &:local(.fieldIcon--avatar) {
-    color: $color-avatar;
+    color: $color-gray;
   }
 }
 
@@ -63,7 +63,7 @@
 }
 
 :local(.status) {
-  border-right: 1px solid $color-border;
+  border-right: 1px solid $color-lightShadow;
   display: flex;
   flex-shrink: 0;
   padding: 10px;
@@ -80,7 +80,7 @@
 
 :local(.titleLink) {
   @include link;
-  color: $color-title;
+  color: $color-black;
   font-family: $fontFamily-roboto;
   flex-shrink: 0;
   font-size: 13px;

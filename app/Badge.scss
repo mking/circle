@@ -22,14 +22,6 @@
     }
   }
 
-  &:local(.badge--FIXED) {
-    background-color: $color-lightGreen;
-
-    :local(.status) {
-      background-color: $color-green;
-    }
-  }
-
   &:local(.badge--SUCCESS) {
     background-color: $color-lightGreen;
 
