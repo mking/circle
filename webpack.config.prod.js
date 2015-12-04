@@ -11,7 +11,10 @@ module.exports = {
   resolve: common.resolve,
   module: common.module,
   plugins: [
-    new webpack.optimize.UglifyJsPlugin()
+    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': 'production'
+    })
   ],
   postcss: common.postcss
 }
