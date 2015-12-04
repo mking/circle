@@ -14,6 +14,10 @@
     background-color: $color-lightRed;
   }
 
+  &:local(.badge--RUNNING) {
+    background-color: $color-lightPurple;
+  }
+
   &:local(.badge--SUCCESS) {
     background-color: $color-lightGreen;
   }

@@ -19,6 +19,8 @@ export default class Badge extends React.Component<IBadgeProps, {}> {
             [StatusType.CANCELLED]: "Cancelled",
             [StatusType.FAILED]: "Failed",
             [StatusType.TIMED_OUT]: "Timed out",
+            [StatusType.RUNNING]: "Running",
+            [StatusType.QUEUED]: "Queued",
         };
         return <div className={classNames(styles.badge, styles[`badge--${StatusType[badgeStatus]}`], className)}>
             <StatusIndicator className={styles.status} status={badgeStatus}/>

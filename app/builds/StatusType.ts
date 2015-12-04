@@ -3,7 +3,9 @@ enum StatusType {
     FIXED,
     CANCELLED,
     FAILED,
-    TIMED_OUT
+    TIMED_OUT,
+    RUNNING,
+    QUEUED
 }
 
 module StatusType {
@@ -14,6 +16,8 @@ module StatusType {
             [StatusType.CANCELLED]: StatusType.CANCELLED,
             [StatusType.FAILED]: StatusType.FAILED,
             [StatusType.TIMED_OUT]: StatusType.FAILED,
+            [StatusType.RUNNING]: StatusType.RUNNING,
+            [StatusType.QUEUED]: StatusType.RUNNING
         };
         return badgeStatuses[status];
     }

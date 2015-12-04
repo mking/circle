@@ -21,6 +21,10 @@
     background-color: $color-red;
   }
 
+  &:local(.status--RUNNING) {
+    background-color: $color-purple;
+  }
+
   &:local(.status--SUCCESS) {
     background-color: $color-green;
   }

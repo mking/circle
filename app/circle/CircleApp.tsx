@@ -21,7 +21,9 @@ export default class CircleApp extends React.Component<ICircleAppProps, {}> {
             StatusType.FIXED,
             StatusType.CANCELLED,
             StatusType.FAILED,
-            StatusType.TIMED_OUT
+            StatusType.TIMED_OUT,
+            StatusType.RUNNING,
+            StatusType.QUEUED
         ]);
         return <div className={classNames(styles.app, className)}>
             <Navbar className={styles.navbar}/>
