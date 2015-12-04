@@ -1,9 +1,11 @@
 {
-  "name": "circular",
+  "name": "circle",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server --config webpack.config.dev.js",
+    "clean": "rm -rf build",
+    "build": "npm run clean && webpack --config webpack.config.prod.js"
   },
   "dependencies": {
     "babel": "^5.0.0",

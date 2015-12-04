@@ -1,20 +1,12 @@
 var autoprefixer = require('autoprefixer')
 var path = require('path')
-var webpack = require('webpack')
 
 function compileCSSWithClassPrefix(prefix) {
   return ['style', `css?localIdentName=${prefix}-[name]-[local]`, 'postcss', 'sass']
 }
 
 module.exports = {
-  entry: [
-    'webpack/hot/dev-server',
-    './app/circle/app'
-  ],
-  output: {
-    filename: 'app.js',
-    publicPath: '/build/'
-  },
+  entry: './app/circle/app',
   resolve: {
     extensions: ['', '.js', '.ts', '.tsx']
   },
@@ -43,14 +35,6 @@ module.exports = {
         loaders: compileCSSWithClassPrefix('circle-builds')
       }
     ]
-  },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ],
-  devServer: {
-    hot: true,
-    inline: true,
-    historyApiFallback: true
   },
   postcss: [autoprefixer]
 }
