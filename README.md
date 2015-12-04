@@ -11,3 +11,8 @@ tsd install
 npm start
 # Visit http://localhost:8080
 ```
+
+TODO
+---
+- Redux in TypeScript
+- React Router in TypeScript
