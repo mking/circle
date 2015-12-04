@@ -1,5 +1,9 @@
-Setup
+Circle
 ===
+[Circle in TypeScript](http://mking.github.io/circle)
+
+Setup
+---
 ```
 nvm use
 npm install
