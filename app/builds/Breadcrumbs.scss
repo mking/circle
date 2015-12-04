@@ -1,5 +1,5 @@
-@import './variables';
-@import './link';
+@import '../common/variables';
+@import '../common/link';
 
 :local(.breadcrumb) {
   flex-shrink: 0;

@@ -1,12 +1,12 @@
 import * as Immutable from "immutable";
 import * as React from "react";
-import Breadcrumbs from "./Breadcrumbs";
-import Builds from "./Builds";
+import Breadcrumbs from "../builds/Breadcrumbs";
+import Builds from "../builds/Builds";
 import Navbar from "./Navbar";
-import Repos from "./Repos";
+import Repos from "../builds/Repos";
 import classNames from "classnames";
 import moment from "moment";
-import StatusType from "./StatusType";
+import StatusType from "../builds/StatusType";
 const styles: any = require("./CircleApp.scss");
 
 interface ICircleAppProps {

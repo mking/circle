@@ -7,8 +7,3 @@ tsd install
 npm start
 # Visit http://localhost:8080
 ```
-
-TODO
----
-- Builds/repos horizontal margins
-- Navbar tooltips

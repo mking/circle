@@ -1,5 +1,5 @@
-@import './variables';
-@import './semanticLink';
+@import '../common/variables';
+@import '../common/semanticLink';
 
 :local(.navbar) {
   background-color: $color-navbar;
@@ -43,4 +43,14 @@
   flex-shrink: 0;
   font-size: 20px;
   transition: color 0.1s ease-in-out;
+}
+
+:local(.tooltip) {
+  left: calc(100% + 10px);
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: calc(50% - 15px);
+  transition: 0.1s opacity ease-in-out;
+  z-index: $zIndex-tooltip;
 }

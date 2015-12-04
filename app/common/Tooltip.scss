@@ -1,0 +1,15 @@
+@import '../common/variables';
+
+:local(.tooltip) {
+  align-items: center;
+  background-color: $color-tooltip;
+  border-radius: 15px;
+  color: white;
+  display: flex;
+  font-family: $fontFamily-roboto;
+  font-size: 13px;
+  font-weight: 300;
+  height: 30px;
+  padding: 0 15px;
+  white-space: nowrap;
+}

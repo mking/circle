@@ -2,6 +2,7 @@
 
 @mixin link {
   color: #27a0b6;
+  outline: none;
   text-decoration: none;
 
   &:hover {
